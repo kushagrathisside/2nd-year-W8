@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int L,N,l,b;
+    scanf("%d ",&L);
+    scanf("%d",&N);
+    while(N)
+    {
+        scanf("%d %d",&l,&b);
+        if(l<=L && b<=L) printf("ACCEPTED\n");
+        else if((l>L && b<L) || (l<L && b>L)) printf("UPLOAD ANOTHER\n");
+        else printf("CROP IT\n");
+        N--;
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
