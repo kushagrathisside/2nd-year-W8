@@ -1,0 +1,16 @@
+#include<stdio.h>
+void TOH(int n,char x,char y,char z) {
+   if(n==1)
+    printf("Moving ring %d from %c to %c\n\n",n,x,y);
+   else
+   {
+      TOH(n-1,x,z,y);
+      printf("Moving ring %d from %c to %c\n\n",n,x,y);
+      TOH(n-1,z,y,x);
+   }
+}
+int main() {
+   int n=3;
+   scanf("%d",&n);
+   TOH(n,'A','C','B');
+}
